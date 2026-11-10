@@ -1,0 +1,29 @@
+"variable","grupo","disponibilidad","enfoque_A","enfoque_B"
+"eid","Excluida","No confirmada",FALSE,FALSE
+"vdate","Excluida","No confirmada",FALSE,FALSE
+"rcount","General","Historial previo, sujeto a verificacion",TRUE,TRUE
+"gender","General","Conocida en evaluacion inicial",TRUE,TRUE
+"dialysisrenalendstage","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"asthma","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"irondef","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"pneum","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"substancedependence","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"psychologicaldisordermajor","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"depress","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"psychother","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"fibrosisandother","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"malnutrition","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"hemo","Clinica","Momento de registro no confirmado",TRUE,TRUE
+"hematocrit","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"neutrophils","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"sodium","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"glucose","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"bloodureanitro","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"creatinine","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"bmi","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"pulse","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"respiration","Clinica","Promedio del episodio; no inicial verificado",TRUE,TRUE
+"secondarydiagnosisnonicd9","Enfermedad/diagnostico","Momento del diagnostico no confirmado",FALSE,TRUE
+"discharged","Excluida","Disponible al finalizar el episodio",FALSE,FALSE
+"facid","General","Establecimiento identificado",TRUE,TRUE
+"lengthofstay","Variable respuesta","Disponible al finalizar el episodio",FALSE,FALSE

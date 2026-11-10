@@ -1,0 +1,57 @@
+ENTREGA DE CODIGO A/B - MATIAS
+======================================
+
+ESTADO COMPROBADO
+- En RStudio del usuario, el 9 de noviembre de 2026 se ejecuto main.R
+  desde un entorno inicialmente vacio, en orden 00->01->02->03->04.
+- Seleccion reproducida solo con VALIDACION: Enfoque B, Gradient Boosting.
+- Validacion: RMSE 0.6023066; MAE 0.4325448; R2 0.9353329.
+- Comparacion: enfoque A RMSE 0.6434635 frente a B RMSE 0.6023066.
+- Los CSV en resultados/ se copiaron de esa ejecucion validada por el usuario.
+
+INSTRUCCIONES DE EJECUCION DESDE CERO
+1. Extraer el ZIP completo. Abrir proyecto_hospitalizacion.Rproj en RStudio.
+2. Asegurarse de usar la carpeta raiz del proyecto (getwd()).
+3. Instalar paquetes necesarios si faltan, por ejemplo:
+   install.packages(c("caret","glmnet","dplyr","car","gbm","rpart",
+                      "ranger","gam","rpart.plot","foreach"))
+4. Cerrar otros proyectos y reiniciar sesion de R (Session > Restart R).
+5. Ejecutar en consola: source("codigo/main.R")
+6. Al finalizar, revisar resultados/mejor_sistema_validacion.csv y
+   resultados/comparacion_enfoques_A_vs_B.csv.
+7. Opcional: source("codigo/05_verificar_resultados_guardados.R")
+
+MUY IMPORTANTE: TEST
+- codigo/00_configuracion.R contiene EJECUTAR_TEST_FINAL <- FALSE.
+- NO cambiar el interruptor para comprobar la integracion o seleccionar modelos.
+- Los archivos en referencia_test_previo/ fueron proporcionados por el grupo:
+  NO se generaron con la nueva ejecucion de Matias.
+- Los CSV de test comunicados por el grupo son internamente coherentes:
+  RMSE 0.6054736, MAE 0.4346074, R2 0.9349064; n=15002.
+  Intervalos empiricos: cobertura 94.71 %, amplitud media 2.311 dias.
+- El mismo conjunto de test ya habia sido consultado durante el desarrollo;
+  por ello NO se debe describir como test completamente independiente.
+
+LIMITACIONES METODOLOGICAS
+- La interpretacion de variables clinicas como datos de una evaluacion inicial
+  es un supuesto NO VERIFICADO: algunas representan promedios del episodio.
+  Esto mantiene riesgo de fuga temporal y limita la aplicabilidad operativa.
+- Modelos y predicciones del entrenamiento avanzados (.rds) son MUY pesados;
+  no se incluyen en este paquete pequeno. Se regeneran ejecutando main.R.
+- Las metricas de validacion cruzada reflejan los procedimientos de los scripts.
+  No garantizan por si solas ausencia de fuga temporal.
+- Las filas de los CSV son datos sinteticos, no pacientes reales.
+
+ESTRUCTURA
+- codigo/: scripts originales integrados, configuracion, main y verificador.
+- datos/: base CSV usada.
+- resultados/: tablas de validacion obtenidas de la ejecucion del usuario.
+- referencia_test_previo/: CSV y grafico de la evaluacion anterior del grupo.
+- MANIFIESTO_SHA256.txt: comprobacion de integridad de archivos de entrega.
+- proyecto_hospitalizacion.Rproj: abre el proyecto en RStudio.
+
+NOTA DE REPRODUCIBILIDAD
+- El codigo fue previamente ejecutado en Windows R 4.6.1 con resultados
+  comparados mediante capturas y CSV. Esta nueva carpeta ZIP no se ha vuelto
+  a ejecutar desde cero dentro del entorno de esta respuesta (sin Rscript).
+- Versiones de paquetes en resultados/session_info_integracion.txt.

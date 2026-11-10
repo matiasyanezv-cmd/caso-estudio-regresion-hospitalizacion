@@ -1,0 +1,12 @@
+OBJETIVO DEL ESTUDIO
+Predecir la duracion de la hospitalizacion a partir de una evaluacion clinica inicial.
+
+SUPUESTO TEMPORAL
+Se interpretan las variables clinicas como informacion disponible en la evaluacion inicial del paciente.
+
+LIMITACION METODOLOGICA
+La documentacion identifica varias mediciones como promedios del episodio. Su disponibilidad inicial no esta verificada y existe riesgo de fuga temporal. Los resultados deben interpretarse bajo esta limitacion.
+
+COMPARACION
+A: variables clinicas + generales.
+B: variables clinicas + generales + enfermedades/diagnosticos.
