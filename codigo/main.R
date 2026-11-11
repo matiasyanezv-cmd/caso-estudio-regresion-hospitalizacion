@@ -1,4 +1,4 @@
-# INTEGRACION MATIAS - Proyecto A/B
+# MAIN - Proyecto A/B: ejecuta todo el proyecto en orden 00 -> 07
 # Ejecucion desde la raiz del proyecto RStudio (abrir .Rproj)
 # Se ejecutan los cuatro scripts en un entorno nuevo para evitar variables antiguas.
 archivos <- file.path("codigo", c("00_configuracion.R", "01_auditoria_exploracion.R",
@@ -27,3 +27,12 @@ cat("\nINTEGRACION FINALIZADA: validaciones estructurales superadas.\n")
 cat("Enfoque seleccionado:", entorno_integracion$enfoque_ganador, "\n")
 cat("Modelo seleccionado:", entorno_integracion$nombre_mejor, "\n")
 if (!isTRUE(entorno_integracion$EJECUTAR_TEST_FINAL)) cat("Test final: NO ejecutado.\n")
+
+# Cifras de respaldo del informe y la presentacion (IC, VIF, hiperparametros,
+# intervalo, PDP/ICE, subgrupos). Se guardan en resultados/cifras_informe/.
+cat("\n========================================\n[5] codigo/06_cifras_informe.R\n========================================\n")
+source("codigo/06_cifras_informe.R", local = new.env(parent = globalenv()), encoding = "UTF-8")
+
+# Comparacion automatica con las cifras declaradas en el informe.
+cat("\n========================================\n[6] codigo/07_verificar_reproducibilidad.R\n========================================\n")
+source("codigo/07_verificar_reproducibilidad.R", local = new.env(parent = globalenv()), encoding = "UTF-8")
